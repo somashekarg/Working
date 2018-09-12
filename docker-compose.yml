@@ -1,0 +1,34 @@
+version: '3.3'
+
+services:
+  postgres:
+    image: postgres:latest
+    #tty: true
+    ports:
+      - "5434:5432"
+    volumes:
+      - d:/docker/postgres/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+      PGDATA: /tmp      
+    #networks:
+      #- mynetwork
+  onedirect:
+    image: microsoft/dotnet:2.1-runtime
+    ports:
+     - 8082:80
+    build:
+     context: .
+     dockerfile: Dockerfile
+    links:
+     - postgres
+    depends_on:
+     - "postgres"
+    #networks:
+     #- mynetwork
+    
+#networks:
+    #mynetwork:
+      #driver: bridge

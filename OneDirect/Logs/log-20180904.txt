@@ -1,0 +1,355 @@
+2018-09-04 18:16:38.124 +05:30 [Information] Request starting HTTP/1.1 DEBUG http://localhost:51799/  0
+2018-09-04 18:16:38.124 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/  
+2018-09-04 18:16:38.560 +05:30 [Information] Request finished in 640.9926ms 200 
+2018-09-04 18:16:39.290 +05:30 [Warning] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2018-09-04 18:16:41.823 +05:30 [Information] Executing action method "OneDirect.Controllers.LoginController.Index (OneDirect)" with arguments (["", "", "", ""]) - ModelState is Valid
+2018-09-04 18:16:53.025 +05:30 [Information] Executing ViewResult, running view at path "/Views/Login/Index.cshtml".
+2018-09-04 18:16:54.114 +05:30 [Information] Executed action "OneDirect.Controllers.LoginController.Index (OneDirect)" in 13010.4612ms
+2018-09-04 18:16:54.186 +05:30 [Information] Request finished in 16262.3042ms 200 text/html; charset=utf-8
+2018-09-04 18:16:54.808 +05:30 [Information] Request starting HTTP/1.1 POST http://localhost:51799/login/savetimezone?timezoneoffset=330&timezoneid=Asia%2FCalcutta application/json; charset=utf-8 0
+2018-09-04 18:16:54.852 +05:30 [Warning] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2018-09-04 18:16:54.933 +05:30 [Information] Executing action method "OneDirect.Controllers.LoginController.savetimezone (OneDirect)" with arguments (["330", "Asia/Calcutta"]) - ModelState is Valid
+2018-09-04 18:16:54.954 +05:30 [Information] Executing JsonResult, writing value "{ result = success }".
+2018-09-04 18:16:55.390 +05:30 [Information] Executed action "OneDirect.Controllers.LoginController.savetimezone (OneDirect)" in 491.8279ms
+2018-09-04 18:16:55.406 +05:30 [Information] Session started; Key:"2f56cd4c-87bf-bcc2-344d-181ded5df6f8", Id:"2b537241-6814-f151-7952-6e2b32f28d65"
+2018-09-04 18:16:55.444 +05:30 [Information] Request finished in 617.1361ms 200 application/json; charset=utf-8
+2018-09-04 18:17:00.537 +05:30 [Information] Request starting HTTP/1.1 POST http://localhost:51799/ application/x-www-form-urlencoded 229
+2018-09-04 18:17:00.824 +05:30 [Information] Executing action method "OneDirect.Controllers.LoginController.Index (OneDirect)" with arguments (["OneDirect.ViewModels.LoginViewModel"]) - ModelState is Valid
+2018-09-04 18:17:02.803 +05:30 [Information] Entity Framework Core "2.0.3-rtm-10026" initialized '"OneDirectContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+2018-09-04 18:17:04.838 +05:30 [Error] An error occurred using the connection to database '"d52v5majvvjp3k"' on server '"tcp://ec2-75-101-142-91.compute-1.amazonaws.com:5432"'.
+Npgsql.PostgresException (0x80004005): 28000: no pg_hba.conf entry for host "122.167.170.177", user "tbknyzjngytzjx", database "d52v5majvvjp3k", SSL off
+   at Npgsql.NpgsqlConnector.<DoReadMessage>d__157.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+   at Npgsql.NpgsqlConnector.<ReadMessage>d__156.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<ReadMessage>d__156.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+   at Npgsql.NpgsqlConnector.<ReadExpecting>d__163`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+   at Npgsql.NpgsqlConnector.<Authenticate>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnector.<Open>d__145.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnection.<Open>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+2018-09-04 18:17:05.221 +05:30 [Error] An exception occurred in the database while iterating the results of a query for context type '"OneDirect.Models.OneDirectContext"'."
+""Npgsql.PostgresException (0x80004005): 28000: no pg_hba.conf entry for host \"122.167.170.177\", user \"tbknyzjngytzjx\", database \"d52v5majvvjp3k\", SSL off
+   at Npgsql.NpgsqlConnector.<DoReadMessage>d__157.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+   at Npgsql.NpgsqlConnector.<ReadMessage>d__156.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<ReadMessage>d__156.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+   at Npgsql.NpgsqlConnector.<ReadExpecting>d__163`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+   at Npgsql.NpgsqlConnector.<Authenticate>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnector.<Open>d__145.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnection.<Open>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass17_1`1.<CompileQueryCore>b__0(QueryContext qc)"
+Npgsql.PostgresException (0x80004005): 28000: no pg_hba.conf entry for host "122.167.170.177", user "tbknyzjngytzjx", database "d52v5majvvjp3k", SSL off
+   at Npgsql.NpgsqlConnector.<DoReadMessage>d__157.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+   at Npgsql.NpgsqlConnector.<ReadMessage>d__156.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<ReadMessage>d__156.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+   at Npgsql.NpgsqlConnector.<ReadExpecting>d__163`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult()
+   at Npgsql.NpgsqlConnector.<Authenticate>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnector.<Open>d__145.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnection.<Open>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass17_1`1.<CompileQueryCore>b__0(QueryContext qc)
+2018-09-04 18:17:05.771 +05:30 [Information] Executing ViewResult, running view at path "/Views/Login/Index.cshtml".
+2018-09-04 18:17:05.829 +05:30 [Information] Executed action "OneDirect.Controllers.LoginController.Index (OneDirect)" in 5223.5293ms
+2018-09-04 18:17:05.867 +05:30 [Information] Request finished in 5332.0497ms 200 text/html; charset=utf-8
+2018-09-04 18:17:06.030 +05:30 [Information] Request starting HTTP/1.1 POST http://localhost:51799/login/savetimezone?timezoneoffset=330&timezoneid=Asia%2FCalcutta application/json; charset=utf-8 0
+2018-09-04 18:17:06.042 +05:30 [Information] Executing action method "OneDirect.Controllers.LoginController.savetimezone (OneDirect)" with arguments (["330", "Asia/Calcutta"]) - ModelState is Valid
+2018-09-04 18:17:06.053 +05:30 [Information] Executing JsonResult, writing value "{ result = success }".
+2018-09-04 18:17:06.072 +05:30 [Information] Executed action "OneDirect.Controllers.LoginController.savetimezone (OneDirect)" in 24.0001ms
+2018-09-04 18:17:06.093 +05:30 [Information] Request finished in 75.2782ms 200 application/json; charset=utf-8
+2018-09-04 19:54:35.921 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/  
+2018-09-04 19:54:35.921 +05:30 [Information] Request starting HTTP/1.1 DEBUG http://localhost:51799/  0
+2018-09-04 19:54:36.164 +05:30 [Information] Request finished in 431.3523ms 200 
+2018-09-04 19:54:36.721 +05:30 [Warning] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The key {61f23a75-06be-4765-b8f5-96839458bcfb} was not found in the key ring.
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2018-09-04 19:54:39.210 +05:30 [Information] Executing action method "OneDirect.Controllers.LoginController.Index (OneDirect)" with arguments (["", "", "", ""]) - ModelState is Valid
+2018-09-04 19:54:48.736 +05:30 [Information] Executing ViewResult, running view at path "/Views/Login/Index.cshtml".
+2018-09-04 19:54:50.227 +05:30 [Information] Executed action "OneDirect.Controllers.LoginController.Index (OneDirect)" in 11860.2845ms
+2018-09-04 19:54:50.471 +05:30 [Information] Request finished in 14709.2144ms 200 text/html; charset=utf-8
+2018-09-04 19:54:51.150 +05:30 [Information] Request starting HTTP/1.1 POST http://localhost:51799/login/savetimezone?timezoneoffset=330&timezoneid=Asia%2FCalcutta application/json; charset=utf-8 0
+2018-09-04 19:54:51.190 +05:30 [Warning] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The key {61f23a75-06be-4765-b8f5-96839458bcfb} was not found in the key ring.
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2018-09-04 19:54:51.264 +05:30 [Information] Executing action method "OneDirect.Controllers.LoginController.savetimezone (OneDirect)" with arguments (["330", "Asia/Calcutta"]) - ModelState is Valid
+2018-09-04 19:54:51.299 +05:30 [Information] Executing JsonResult, writing value "{ result = success }".
+2018-09-04 19:54:51.693 +05:30 [Information] Executed action "OneDirect.Controllers.LoginController.savetimezone (OneDirect)" in 466.9258ms
+2018-09-04 19:54:51.711 +05:30 [Information] Session started; Key:"959b0ddf-5aef-c17c-deac-ea41a883f45c", Id:"68b5d3b1-f512-edc0-fc51-1c2dbac116fc"
+2018-09-04 19:54:51.729 +05:30 [Information] Request finished in 580.9021ms 200 application/json; charset=utf-8
+2018-09-04 19:54:58.835 +05:30 [Information] Request starting HTTP/1.1 POST http://localhost:51799/ application/x-www-form-urlencoded 229
+2018-09-04 19:54:59.128 +05:30 [Information] Executing action method "OneDirect.Controllers.LoginController.Index (OneDirect)" with arguments (["OneDirect.ViewModels.LoginViewModel"]) - ModelState is Valid
+2018-09-04 19:55:00.965 +05:30 [Information] Entity Framework Core "2.0.3-rtm-10026" initialized '"OneDirectContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+2018-09-04 19:55:02.566 +05:30 [Information] Executed DbCommand ("34"ms) [Parameters=["@__lUserID_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p\".\"UserID\", \"p\".\"Address\", \"p\".\"Email\", \"p\".\"LoginSessionId\", \"p\".\"Name\", \"p\".\"NPI\", \"p\".\"Password\", \"p\".\"Phone\", \"p\".\"Type\", \"p\".\"vseeid\"
+FROM \"User\" AS \"p\"
+WHERE \"p\".\"UserID\" = @__lUserID_0
+LIMIT 1"
+2018-09-04 19:55:02.967 +05:30 [Information] Executed DbCommand ("8"ms) [Parameters=["@p9='?', @p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?', @p8='?'"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET \"Address\" = @p0, \"Email\" = @p1, \"LoginSessionId\" = @p2, \"Name\" = @p3, \"NPI\" = @p4, \"Password\" = @p5, \"Phone\" = @p6, \"Type\" = @p7, \"vseeid\" = @p8
+WHERE \"UserID\" = @p9;"
+2018-09-04 19:55:03.188 +05:30 [Information] Executed DbCommand ("22"ms) [Parameters=["@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?', @p8='?', @p9='?', @p10='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"SessionAuditTrail\" (\"EmailID\", \"LinkedSession\", \"Name\", \"PasswordUsed\", \"SessionClosedTime\", \"SessionID\", \"SessionOpenTime\", \"SessionStatus\", \"SessionType\", \"Type\", \"UserID\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10)
+RETURNING \"AuditTrailID\";"
+2018-09-04 19:55:03.267 +05:30 [Information] Executing RedirectResult, redirecting to "/Patient".
+2018-09-04 19:55:03.282 +05:30 [Information] Executed action "OneDirect.Controllers.LoginController.Index (OneDirect)" in 4347.0789ms
+2018-09-04 19:55:03.319 +05:30 [Information] Request finished in 4472.5247ms 302 
+2018-09-04 19:55:03.353 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/Patient  
+2018-09-04 19:55:03.398 +05:30 [Information] Entity Framework Core "2.0.3-rtm-10026" initialized '"OneDirectContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+2018-09-04 19:55:03.436 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__lUserID_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p\".\"UserID\", \"p\".\"Address\", \"p\".\"Email\", \"p\".\"LoginSessionId\", \"p\".\"Name\", \"p\".\"NPI\", \"p\".\"Password\", \"p\".\"Phone\", \"p\".\"Type\", \"p\".\"vseeid\"
+FROM \"User\" AS \"p\"
+WHERE \"p\".\"UserID\" = @__lUserID_0
+LIMIT 1"
+2018-09-04 19:55:03.476 +05:30 [Information] Executing action method "OneDirect.Controllers.PatientController.Index (OneDirect)" with arguments (["", "", ""]) - ModelState is Valid
+2018-09-04 19:55:03.532 +05:30 [Debug] Pain Post Start
+2018-09-04 19:55:03.748 +05:30 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"p\".\"PatientLoginId\", \"p\".\"PatientID\", \"p\".\"PatientName\", \"p\".\"PhoneNumber\", \"_provider\".\"Name\" AS \"ProviderId\", \"p\".\"therapistid\", CASE
+    WHEN \"_patadmin\".\"UserID\" IS NOT NULL
+    THEN \"_patadmin\".\"Name\" ELSE ''
+END AS \"PatientAdminId\", \"p\".\"AddressLine\", \"p\".\"DOB\", \"p\".\"City\", \"p\".\"State\", \"p\".\"SurgeryDate\", \"p\".\"SSN\", \"p\".\"Side\", \"p\".\"EquipmentType\", (
+    SELECT \"x1\".\"DeviceConfiguration\"
+    FROM \"PatientRx\" AS \"x1\"
+    WHERE \"x1\".\"PatientID\" = \"p\".\"PatientID\"
+    LIMIT 1
+)
+FROM \"Patient\" AS \"p\"
+INNER JOIN \"User\" AS \"_provider\" ON \"p\".\"ProviderID\" = \"_provider\".\"UserID\"
+LEFT JOIN \"User\" AS \"_patadmin\" ON \"p\".\"PAID\" = \"_patadmin\".\"UserID\""
+2018-09-04 19:55:04.597 +05:30 [Information] Executing ViewResult, running view at path "/Views/Patient/Index.cshtml".
+2018-09-04 19:55:05.536 +05:30 [Information] Executed action "OneDirect.Controllers.PatientController.Index (OneDirect)" in 2116.3815ms
+2018-09-04 19:55:05.682 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/iCheck/all.css  
+2018-09-04 19:55:05.699 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/datepicker/bootstrap-datepicker.css  
+2018-09-04 19:55:05.701 +05:30 [Information] Request finished in 2224.238ms 200 text/html; charset=utf-8
+2018-09-04 19:55:05.716 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/fullcalendar/fullcalendar.css  
+2018-09-04 19:55:05.727 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/dist/css/AdminLTE.css  
+2018-09-04 19:55:05.729 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/datatables/dataTables.bootstrap.css  
+2018-09-04 19:55:05.749 +05:30 [Information] Sending file. Request path: '"/plugins/datepicker/bootstrap-datepicker.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\datepicker\bootstrap-datepicker.css"'
+2018-09-04 19:55:05.764 +05:30 [Information] Sending file. Request path: '"/plugins/fullcalendar/fullcalendar.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\fullcalendar\fullcalendar.css"'
+2018-09-04 19:55:05.768 +05:30 [Information] Sending file. Request path: '"/dist/css/AdminLTE.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\dist\css\AdminLTE.css"'
+2018-09-04 19:55:05.774 +05:30 [Information] Sending file. Request path: '"/plugins/iCheck/all.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\iCheck\all.css"'
+2018-09-04 19:55:05.776 +05:30 [Information] Sending file. Request path: '"/plugins/datatables/dataTables.bootstrap.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\datatables\dataTables.bootstrap.css"'
+2018-09-04 19:55:05.822 +05:30 [Information] Request finished in 164.7566ms 200 text/css
+2018-09-04 19:55:05.887 +05:30 [Information] Request finished in 185.3897ms 200 text/css
+2018-09-04 19:55:05.927 +05:30 [Information] Request finished in 213.4031ms 200 text/css
+2018-09-04 19:55:05.969 +05:30 [Information] Request finished in 245.1695ms 200 text/css
+2018-09-04 19:55:05.984 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/bootstrap/js/bootstrap.min.js  
+2018-09-04 19:55:05.999 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/morris/morris.css  
+2018-09-04 19:55:06.001 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/iCheck/minimal/_all.css  
+2018-09-04 19:55:06.012 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/jvectormap/jquery-jvectormap-1.2.2.css  
+2018-09-04 19:55:06.015 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/iCheck/square/_all.css  
+2018-09-04 19:55:06.047 +05:30 [Information] Sending file. Request path: '"/plugins/morris/morris.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\morris\morris.css"'
+2018-09-04 19:55:06.052 +05:30 [Information] Sending file. Request path: '"/bootstrap/js/bootstrap.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\bootstrap\js\bootstrap.min.js"'
+2018-09-04 19:55:06.108 +05:30 [Information] Sending file. Request path: '"/plugins/iCheck/square/_all.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\iCheck\square\_all.css"'
+2018-09-04 19:55:06.112 +05:30 [Information] Sending file. Request path: '"/plugins/iCheck/minimal/_all.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\iCheck\minimal\_all.css"'
+2018-09-04 19:55:06.140 +05:30 [Information] Request finished in 159.7724ms 200 text/css
+2018-09-04 19:55:06.189 +05:30 [Information] Sending file. Request path: '"/plugins/jvectormap/jquery-jvectormap-1.2.2.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\jvectormap\jquery-jvectormap-1.2.2.css"'
+2018-09-04 19:55:06.199 +05:30 [Information] Request finished in 183.6545ms 200 text/css
+2018-09-04 19:55:06.211 +05:30 [Information] Request finished in 431.2807ms 200 text/css
+2018-09-04 19:55:06.240 +05:30 [Information] Request finished in 231.399ms 200 application/javascript
+2018-09-04 19:55:06.316 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/iCheck/flat/_all.css  
+2018-09-04 19:55:06.333 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/iCheck/line/_all.css  
+2018-09-04 19:55:06.338 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/iCheck/polaris/polaris.css  
+2018-09-04 19:55:06.346 +05:30 [Information] Request finished in 400.6443ms 200 text/css
+2018-09-04 19:55:06.371 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/iCheck/futurico/futurico.css  
+2018-09-04 19:55:06.378 +05:30 [Information] Sending file. Request path: '"/plugins/iCheck/flat/_all.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\iCheck\flat\_all.css"'
+2018-09-04 19:55:06.405 +05:30 [Information] Sending file. Request path: '"/plugins/iCheck/line/_all.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\iCheck\line\_all.css"'
+2018-09-04 19:55:06.407 +05:30 [Information] Sending file. Request path: '"/plugins/iCheck/polaris/polaris.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\iCheck\polaris\polaris.css"'
+2018-09-04 19:55:06.444 +05:30 [Information] Request finished in 160.989ms 200 text/css
+2018-09-04 19:55:06.452 +05:30 [Information] Sending file. Request path: '"/plugins/iCheck/futurico/futurico.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\iCheck\futurico\futurico.css"'
+2018-09-04 19:55:06.473 +05:30 [Information] Request finished in 163.3313ms 200 text/css
+2018-09-04 19:55:06.494 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/datepicker/bootstrap-datepicker.js  
+2018-09-04 19:55:06.513 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/datatables/jquery.dataTables.min.js  
+2018-09-04 19:55:06.565 +05:30 [Information] Request finished in 200.1813ms 200 text/css
+2018-09-04 19:55:06.597 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/datatables/dataTables.bootstrap.min.js  
+2018-09-04 19:55:06.641 +05:30 [Information] Sending file. Request path: '"/plugins/datepicker/bootstrap-datepicker.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\datepicker\bootstrap-datepicker.js"'
+2018-09-04 19:55:06.659 +05:30 [Information] Sending file. Request path: '"/plugins/datatables/dataTables.bootstrap.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\datatables\dataTables.bootstrap.min.js"'
+2018-09-04 19:55:06.660 +05:30 [Information] Sending file. Request path: '"/plugins/datatables/jquery.dataTables.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\datatables\jquery.dataTables.min.js"'
+2018-09-04 19:55:06.728 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/Scripts/jquery.validate.min.js  
+2018-09-04 19:55:06.777 +05:30 [Information] Request finished in 266.8268ms 200 application/javascript
+2018-09-04 19:55:06.781 +05:30 [Information] Request finished in 740.5521ms 200 text/css
+2018-09-04 19:55:06.844 +05:30 [Information] Sending file. Request path: '"/Scripts/jquery.validate.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\Scripts\jquery.validate.min.js"'
+2018-09-04 19:55:06.886 +05:30 [Information] Request finished in 320.9254ms 200 application/javascript
+2018-09-04 19:55:06.886 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/Flot/jquery.flot.js  
+2018-09-04 19:55:06.899 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/Scripts/jquery.validate.unobtrusive.min.js  
+2018-09-04 19:55:06.908 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/morris/morris.min.js  
+2018-09-04 19:55:06.919 +05:30 [Information] Sending file. Request path: '"/plugins/Flot/jquery.flot.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\Flot\jquery.flot.js"'
+2018-09-04 19:55:06.939 +05:30 [Information] Sending file. Request path: '"/plugins/morris/morris.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\morris\morris.min.js"'
+2018-09-04 19:55:06.949 +05:30 [Information] Sending file. Request path: '"/Scripts/jquery.validate.unobtrusive.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\Scripts\jquery.validate.unobtrusive.min.js"'
+2018-09-04 19:55:07.029 +05:30 [Information] Request finished in 333.663ms 200 application/javascript
+2018-09-04 19:55:07.055 +05:30 [Information] Request finished in 159.1548ms 200 application/javascript
+2018-09-04 19:55:07.117 +05:30 [Information] Request finished in 826.969ms 200 text/css
+2018-09-04 19:55:07.174 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/Flot/jquery.flot.resize.js  
+2018-09-04 19:55:07.275 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/sparkline/jquery.sparkline.min.js  
+2018-09-04 19:55:07.293 +05:30 [Information] Request finished in 106.0444ms 200 application/javascript
+2018-09-04 19:55:07.352 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/jvectormap/jquery-jvectormap-world-mill-en.js  
+2018-09-04 19:55:07.357 +05:30 [Information] Sending file. Request path: '"/plugins/Flot/jquery.flot.resize.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\Flot\jquery.flot.resize.js"'
+2018-09-04 19:55:07.376 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js  
+2018-09-04 19:55:07.394 +05:30 [Information] Sending file. Request path: '"/plugins/sparkline/jquery.sparkline.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\sparkline\jquery.sparkline.min.js"'
+2018-09-04 19:55:07.419 +05:30 [Information] Sending file. Request path: '"/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\jvectormap\jquery-jvectormap-world-mill-en.js"'
+2018-09-04 19:55:07.458 +05:30 [Information] Request finished in 902.4591ms 200 application/javascript
+2018-09-04 19:55:07.485 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/dist/img/user2-160x160.jpg  
+2018-09-04 19:55:07.502 +05:30 [Information] Sending file. Request path: '"/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js"'
+2018-09-04 19:55:07.548 +05:30 [Information] Sending file. Request path: '"/dist/img/user2-160x160.jpg"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\dist\img\user2-160x160.jpg"'
+2018-09-04 19:55:07.566 +05:30 [Information] Request finished in 485.4863ms 200 application/javascript
+2018-09-04 19:55:07.595 +05:30 [Information] Request finished in 667.2154ms 200 application/javascript
+2018-09-04 19:55:07.654 +05:30 [Information] Request finished in 289.9488ms 200 application/javascript
+2018-09-04 19:55:07.704 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/knob/jquery.knob.js  
+2018-09-04 19:55:07.713 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/images/logo_small.png  
+2018-09-04 19:55:07.717 +05:30 [Information] Request finished in 586.8125ms 200 application/javascript
+2018-09-04 19:55:07.736 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js  
+2018-09-04 19:55:07.765 +05:30 [Information] Sending file. Request path: '"/plugins/knob/jquery.knob.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\knob\jquery.knob.js"'
+2018-09-04 19:55:07.826 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/daterangepicker/daterangepicker.js  
+2018-09-04 19:55:07.831 +05:30 [Information] Sending file. Request path: '"/images/logo_small.png"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\images\logo_small.png"'
+2018-09-04 19:55:07.850 +05:30 [Information] Sending file. Request path: '"/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js"'
+2018-09-04 19:55:07.897 +05:30 [Information] Sending file. Request path: '"/plugins/daterangepicker/daterangepicker.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\daterangepicker\daterangepicker.js"'
+2018-09-04 19:55:07.922 +05:30 [Information] Request finished in 169.2121ms 200 image/png
+2018-09-04 19:55:07.975 +05:30 [Information] Request finished in 254.672ms 200 application/javascript
+2018-09-04 19:55:07.980 +05:30 [Information] Request finished in 329.012ms 200 image/jpeg
+2018-09-04 19:55:08.021 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/iCheck/icheck.min.js  
+2018-09-04 19:55:08.060 +05:30 [Information] Request finished in 247.8829ms 200 application/javascript
+2018-09-04 19:55:08.066 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/fastclick/fastclick.js  
+2018-09-04 19:55:08.074 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/slimScroll/jquery.slimscroll.min.js  
+2018-09-04 19:55:08.094 +05:30 [Information] Sending file. Request path: '"/plugins/iCheck/icheck.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\iCheck\icheck.min.js"'
+2018-09-04 19:55:08.136 +05:30 [Information] Sending file. Request path: '"/plugins/fastclick/fastclick.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\fastclick\fastclick.js"'
+2018-09-04 19:55:08.145 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/dist/js/app.min.js  
+2018-09-04 19:55:08.149 +05:30 [Information] Sending file. Request path: '"/plugins/slimScroll/jquery.slimscroll.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\slimScroll\jquery.slimscroll.min.js"'
+2018-09-04 19:55:08.189 +05:30 [Information] Sending file. Request path: '"/dist/js/app.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\dist\js\app.min.js"'
+2018-09-04 19:55:08.218 +05:30 [Information] Request finished in 147.5253ms 200 application/javascript
+2018-09-04 19:55:08.229 +05:30 [Information] Request finished in 162.7521ms 200 application/javascript
+2018-09-04 19:55:08.242 +05:30 [Information] Request finished in 914.134ms 200 application/javascript
+2018-09-04 19:55:08.264 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/js/printThis.js  
+2018-09-04 19:55:08.321 +05:30 [Information] Sending file. Request path: '"/js/printThis.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\js\printThis.js"'
+2018-09-04 19:55:08.338 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/js/jquery.backDetect.min.js  
+2018-09-04 19:55:08.387 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/fullcalendar/fullcalendar.js  
+2018-09-04 19:55:08.399 +05:30 [Information] Sending file. Request path: '"/js/jquery.backDetect.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\js\jquery.backDetect.min.js"'
+2018-09-04 19:55:08.417 +05:30 [Information] Sending file. Request path: '"/plugins/fullcalendar/fullcalendar.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\fullcalendar\fullcalendar.js"'
+2018-09-04 19:55:08.439 +05:30 [Information] Request finished in 140.3358ms 200 application/javascript
+2018-09-04 19:55:08.549 +05:30 [Information] Request finished in 181.2641ms 200 application/javascript
+2018-09-04 19:55:08.567 +05:30 [Information] Request finished in 617.288ms 200 application/javascript
+2018-09-04 19:55:08.569 +05:30 [Information] Request finished in 350.5514ms 200 application/javascript
+2018-09-04 19:55:08.595 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/plugins/fullcalendar/fullcalendar.print.css  
+2018-09-04 19:55:08.657 +05:30 [Information] Request finished in 310.411ms 200 application/javascript
+2018-09-04 19:55:08.667 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/bootstrap/fonts/glyphicons-halflings-regular.woff2  
+2018-09-04 19:55:08.679 +05:30 [Information] Sending file. Request path: '"/plugins/fullcalendar/fullcalendar.print.css"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\plugins\fullcalendar\fullcalendar.print.css"'
+2018-09-04 19:55:08.711 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:51799/Scripts/jquery.maskedinput.min.js  
+2018-09-04 19:55:08.737 +05:30 [Information] Request finished in 495.5483ms 200 application/javascript
+2018-09-04 19:55:08.759 +05:30 [Information] Request finished in 211.5475ms 200 text/css
+2018-09-04 19:55:08.775 +05:30 [Information] Sending file. Request path: '"/bootstrap/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\bootstrap\fonts\glyphicons-halflings-regular.woff2"'
+2018-09-04 19:55:08.782 +05:30 [Information] Sending file. Request path: '"/Scripts/jquery.maskedinput.min.js"'. Physical path: '"D:\src\Working\OneDirect\wwwroot\Scripts\jquery.maskedinput.min.js"'
+2018-09-04 19:55:08.886 +05:30 [Information] Request finished in 243.6785ms 200 font/woff2
+2018-09-04 19:55:08.967 +05:30 [Information] Request finished in 291.1223ms 200 application/javascript
+2018-09-04 19:55:08.987 +05:30 [Information] Request starting HTTP/1.1 POST http://localhost:51799/login/savetimezone?timezoneoffset=330&timezoneid=Asia%2FCalcutta application/json; charset=utf-8 0
+2018-09-04 19:55:09.002 +05:30 [Information] Executing action method "OneDirect.Controllers.LoginController.savetimezone (OneDirect)" with arguments (["330", "Asia/Calcutta"]) - ModelState is Valid
+2018-09-04 19:55:09.017 +05:30 [Information] Executing JsonResult, writing value "{ result = success }".
+2018-09-04 19:55:09.030 +05:30 [Information] Executed action "OneDirect.Controllers.LoginController.savetimezone (OneDirect)" in 30.7343ms
+2018-09-04 19:55:09.044 +05:30 [Information] Request finished in 107.9742ms 200 application/json; charset=utf-8

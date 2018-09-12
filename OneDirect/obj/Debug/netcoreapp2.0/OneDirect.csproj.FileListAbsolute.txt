@@ -1,0 +1,12 @@
+D:\src\Working\OneDirect\bin\Debug\netcoreapp2.0\Select.Html.dep
+D:\src\Working\OneDirect\bin\Debug\netcoreapp2.0\OneDirect.deps.json
+D:\src\Working\OneDirect\bin\Debug\netcoreapp2.0\OneDirect.runtimeconfig.json
+D:\src\Working\OneDirect\bin\Debug\netcoreapp2.0\OneDirect.runtimeconfig.dev.json
+D:\src\Working\OneDirect\bin\Debug\netcoreapp2.0\OneDirect.dll
+D:\src\Working\OneDirect\bin\Debug\netcoreapp2.0\OneDirect.pdb
+D:\src\Working\OneDirect\obj\Debug\netcoreapp2.0\OneDirect.csproj.CoreCompileInputs.cache
+D:\src\Working\OneDirect\obj\Debug\netcoreapp2.0\OneDirect.AssemblyInfoInputs.cache
+D:\src\Working\OneDirect\obj\Debug\netcoreapp2.0\OneDirect.AssemblyInfo.cs
+D:\src\Working\OneDirect\obj\Debug\netcoreapp2.0\OneDirect.dll
+D:\src\Working\OneDirect\obj\Debug\netcoreapp2.0\OneDirect.pdb
+D:\src\Working\OneDirect\obj\Debug\netcoreapp2.0\OneDirect.csprojAssemblyReference.cache
