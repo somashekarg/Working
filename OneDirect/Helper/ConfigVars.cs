@@ -85,7 +85,7 @@ namespace OneDirect.Helper
             //ConnectionString = Utilities.GetPGConnectionString("postgres://robunemucinrwo:4429505784f839dc9b2a22d16c3ba464e72e657058f3bcfdfa46615e7a55793a@ec2-107-21-255-2.compute-1.amazonaws.com:5432/d60oduivhro875");
             //trextest- red
             //ConnectionString = Utilities.GetPGConnectionString("postgres://tbknyzjngytzjx:22bfaa1b29dcd1cc8c4bb705fded3e8bb8e968625ff393d8fa9fd4730974c523@ec2-75-101-142-91.compute-1.amazonaws.com:5432/d52v5majvvjp3k");
-			ConnectionString = Utilities.GetPGConnectionString("postgres://postgres:password@172.18.0.2:5432/postgres");
+			ConnectionString = Utilities.GetPGConnectionString("postgres://postgres:password@172.19.0.2:5432/postgres");
             //MC demo
             //ConnectionString = Utilities.GetPGConnectionString("postgres://tbozyrjnirtved:3d035cb1f5cb6e92f0913d12e439ea362d5f3cd831e1d2b7b63b537385d1d6d5@ec2-50-19-105-113.compute-1.amazonaws.com:5432/dc71s40e83mmsu");
             copyrightmsg = "2017 - 2018 TREX INVESTMENT, INC.";
